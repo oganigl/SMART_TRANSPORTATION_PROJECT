@@ -41,6 +41,11 @@ g = 9.8;      %m/s^2
 %%% air density
 rho = 1.225; %  kg/m3
 
+%%simulation parameters
+step_sim = 1;
+time_sim = 10;
+w_input = 5;
+delta_input = 5;
 
 
 
