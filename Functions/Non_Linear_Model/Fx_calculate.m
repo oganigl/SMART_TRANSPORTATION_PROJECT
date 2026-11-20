@@ -1,16 +1,7 @@
-function [outputArg1,outputArg2] = Fx_calculate(inputArg1,inputArg2)
+function [Fx] = Fx_calculate(lambda,road_cond)
 %FX_CALCULATE Summary of this function goes here
 %   Detailed explanation goes here
-arguments (Input)
-    inputArg1
-    inputArg2
-end
-
-arguments (Output)
-    outputArg1
-    outputArg2
-end
-
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+u = sign(lambda)*(road_cond(1)*(1-exp(-abs(lambda)*road_cond(2)))-abs(lambda)*road_cond(3));
+FN= m*g/2;
+Fx=u*FN;
 end
