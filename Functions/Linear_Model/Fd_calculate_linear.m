@@ -1,16 +1,5 @@
 function Fd = Fd_calculate_linear(vx)
-global m
-global Iz
-global lf
-global lr
+global m Cd Af Cr g rho theta
 
-global Cd
-global Af
-global Cr
-global R
-global Clambda
-global Caf
-global Car
-global g
-global rho
-Fd = (1/2) * rho * Cd * Af * (vx)^2 + Cr*m*g*cos(theta) + m*g*sin(theta);
+Fd = 0.5 * rho * Cd * Af * (vx)^2 + Cr * m * g * cos(theta) + m * g * sin(theta);
+end

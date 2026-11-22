@@ -1,17 +1,10 @@
 function Fyf = Fyf_calculate_linear(delta,vx,Beta,yaw_dot)
-global m
-global Iz
-global lf
-global lr
 
-global Cd
-global Af
-global Cr
-global R
-global Clambda
+global lf
 global Caf
-global Car
-global g
-global rho
- alphaf = delta - (vx*Beta + lf*yaw_dot)/vx;
-  Fyf = Caf*alphaf;
+if abs(vx) < 0.01
+    Fyf = 0;
+else
+  alphaf = delta - (vx*Beta + lf*yaw_dot)/vx;
+  Fyf = 2*Caf*alphaf;
+end

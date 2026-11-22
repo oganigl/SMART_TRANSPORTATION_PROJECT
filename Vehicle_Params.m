@@ -13,9 +13,7 @@ global Caf
 global Car
 global g
 global rho
-
-linear_model = true;
-theta = 0;
+global theta
 %%% Vehicle geometry 
 m = 1400;     %Kg
 Iz = 1960;    %kg*m^2
@@ -44,12 +42,14 @@ rho = 1.225; %  kg/m3
 %%simulation parameters
 step_sim = 1;
 time_sim = 10;
-w_input = 5;
-delta_input = 5;
+w_input = 5; % Angular speed in the wheels
+delta_input = pi/2; % Yaw angle
 
 
+theta = 0; % Slope
 udry = [1.11, 23.99, 0.52];
 uwet = [0.687, 33.822, 0.347];
 uice = [0.19, 94.13, 0.06];
 
 
+Vx_ini = 0;
