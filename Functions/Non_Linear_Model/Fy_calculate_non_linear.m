@@ -1,4 +1,4 @@
-function [Fy] = Lateral_tire_foce_calculate(v, Alphai, Lambdai)
+function [Fy] = Fy_calculate_non_linear(v, Alphai, Lambdai)
 
 By = 2 * (2 - v) * 8.3278;
 Cy = (5/4 - v/4) * 1.11009;
