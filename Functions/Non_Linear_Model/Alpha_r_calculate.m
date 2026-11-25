@@ -3,6 +3,6 @@ function [alphaR] = Alpha_r_calculate(lr,delta,vx,Beta,yaw_dot)
 %   Detailed explanation goes here
 
 
-alphaR = - atan((vx*Beta - lr*yaw_dot)/max(vx,0.000000001));
+alphaR = - atan((vx*Beta - lr*yaw_dot)/max(vx,0.1));
 
 end
