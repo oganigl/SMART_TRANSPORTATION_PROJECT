@@ -14,6 +14,8 @@ global Car
 global g
 global rho
 global theta
+global v
+
 %%% Vehicle geometry 
 m = 1400;     %Kg
 Iz = 1960;    %kg*m^2
@@ -53,3 +55,4 @@ uice = [0.19, 94.13, 0.06];
 
 
 Vx_ini = 0;
+v= 1;

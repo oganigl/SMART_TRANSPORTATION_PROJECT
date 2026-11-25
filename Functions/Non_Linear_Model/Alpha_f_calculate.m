@@ -1,6 +1,6 @@
-function [alphaF] = Alpha_f_calculate(delta,vx,Beta,yaw_dot)
+function [alphaF] = Alpha_f_calculate(lf,delta,vx,Beta,yaw_dot)
 %ALPHA_F_CALCULATE Summary of this function goes here
 %   Detailed explanation goes here
-alphaF = delta - arctan((vx*Beta + lf*yaw_dot)/vx);
+alphaF = delta - atan((vx*Beta + lf*yaw_dot)/max(vx,0.000000001));;
 
 end
