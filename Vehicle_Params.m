@@ -45,7 +45,7 @@ rho = 1.225; %  kg/m3
 step_sim = 1;
 time_sim = 10;
 w_input = 5; % Angular speed in the wheels
-delta_input = pi/2; % Yaw angle
+delta_input = 0; % Yaw angle
 
 
 theta = 0; % Slope
